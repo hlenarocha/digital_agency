@@ -1,0 +1,93 @@
+/* Smartphones (600px para baixo) */
+@media (max-width: 900px) {
+  .home-page {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  body {
+    font-size: medium;
+  } 
+
+  .home-text {
+    word-wrap: break-word;
+    width: 80%;
+    margin-left: 0;
+  }
+
+  .whats {
+    width: 150px;
+    height: 200px;
+    
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .card {
+    width: 90%;
+  }
+  
+  .cards {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-content {
+    width: 100%;
+    
+  }
+
+  .home-img {
+    width: 350px;
+    height: 350px;
+    margin: 50px 0;
+  }
+
+  .btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+  }
+
+  .logo {
+    margin-left: 5%;
+  }
+
+  .navbar {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .hamburguer-menu-icon {
+    display: block;
+  }
+}
+
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media (min-width: 600px) {
+
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media (min-width: 992px) {
+  
+}
+
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+
+}
+

@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes moving {
+  0% {transform: rotate(-1deg);} 
+  50% {transform: rotate(1deg)};
+  100% {transform: rotate(-1deg);}
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  font-size:  1rem;
+  background-color: rgb(235, 235, 235);
+}
+
+/* NAVBAR */
+
+.logo {
+  font-family: "Cedarville Cursive", cursive;
+  color: #343153;
+  font-size: 30px;
+  left: 0;
+  cursor: default;
+  margin-left: 15%;
+}
+
+.navbar:hover {
+  background-color: rgb(211, 211, 211);
+  border-bottom: 2px dashed #df5c65;
+  
+}
+
+.navbar.gray:hover {
+  background-color: rgb(15, 15, 15);
+}
+
+.logo-img {
+  object-fit: cover;
+  background-color: transparent;
+}
+
+
+.menu-item {
+  margin-right: 30px;
+  text-decoration: none;
+  color: rgb(52, 49, 83);
+  transition: 0.5s;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  border-top: 5px solid rgb(194, 68, 89);
+  padding-top: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.btn-contato {
+  background-color: #343153;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn-contato:hover {
+  background-color: rgb(194, 68, 89);
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+ 
+}
+
+/* HOME */
+.btn-contrate {
+  text-decoration: none;
+  background-color: rgb(194, 68, 89);
+  color: white;
+  border-radius: 50px;
+  padding: 20px;
+  width: fit-content;
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 50px;
+  transition: 0.3s;
+}
+
+.btn-contrate:hover {
+  background-color: #df5c65;
+  border: 3px dashed rgb(25, 62, 226);
+}
+
+.home-text {
+  margin-top: 5%;
+  line-height: 2;
+  display: inline-block;
+  width: 400px;
+  margin-left: 80px;
+}
+
+.bemvindo {
+  letter-spacing: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #F83D4A;
+}
+
+.logo-home {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 60px;
+  color: rgb(52, 49, 83);
+  margin-left: 10px;
+}
+
+.home-paragrafo {
+  text-align: justify;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.home-img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+/*.home-img:hover {
+  opacity: 0.5;
+} */
+
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1%;
+}
+
+/* SOBRE */ 
+
+
+.sobre-content {
+  /* border: 1px solid black; */
+  justify-content: center;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.sobre-title {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 200px;
+  margin-top: 50px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+  margin-bottom: 500px;
+  perspective: 1000px;
+}
+
+.icon {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background-color: transparent;
+}
+
+.card-title {
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 30%;
+  padding: 20px;
+  margin: 1%;
+  border: 2px dashed rgb(194, 68, 89);
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*.card:hover {
+  background-color:#F83D4A;
+  border: 3px dashed rgb(52, 49, 83);
+  cursor: pointer;
+  
+}
+
+.card:hover .card-title, .card:hover .icon {
+  display: none;
+}*/
+
+.card .tras {
+  transform: rotateY(180deg);
+}
+
+.card .frente, .card .tras {
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.cards:active .card, .cards:hover .card, cards:hover .frente {
+  transform: rotateY(180deg);
+  background-color: #F83D4A;
+  
+
+}
+
+.cards:hover .frente {
+  backface-visibility: hidden;
+}
+
+/*
+.card:hover .card-title-oculto, .card:hover .card-text-oculto {
+  display: block;
+  background-color: transparent;
+
+} 
+*/
+
+.card-title {
+  font-size: large;
+  color:rgb(52, 49, 83);
+  background-color: transparent;
+}
+
+.card-text-oculto, .card-title-oculto {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+} 
+
+/* CONTATO */
+footer {
+  border-top: 5px solid #393757;
+  background-image: linear-gradient(rgb(235, 114, 134),rgb(155, 43, 62));
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: fit-content;
+}
+
+.footer-content {
+  background-color: transparent;
+  text-align: center;
+  line-height: 30px;
+  
+}
+
+.text-footer {
+  margin-top: 50px;
+  color: rgb(235, 235, 235);
+}
+
+.whats {
+  width: 200px;
+  height: 250px;
+  position: fixed;
+  bottom: 40px;
+  right: 5px;
+  background-color: transparent;
+}
+
+.whats:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+h1, p, h3, a, div, span {
+  background-color: transparent;
+
+}
+
+.footer-title {
+  color: rgb(52, 49, 83);
+  margin-bottom: 10px;
+}
+
+.link-footer {
+  text-decoration: none;
+  color: #393757;
+  font-weight: bold;
+}
+
+.link-footer:hover {
+  color: #5d5a83;
+}
+
+.social-icons {
+  width: 120px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-social {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  
+}
+
+.icon-social:hover {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+  align-items: center;
+  
+}
+
+/* MODE */
+.mode {
+  width: 80px;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 30%;
+} 
+
+.light-mode {
+  width: 60px;
+  height: 50px;
+  border-top-right-radius: 50%;
+  background-color:#F83D4A;
+
+}
+
+.dark-mode {
+  width: 60px;
+  height: 50px;
+  border-bottom-right-radius: 50%;
+  background-color: white;
+}
+
+.light-mode-img {
+  background-color: transparent;
+  margin: 10px ;
+}
+
+.dark-mode-img {
+  background-color: transparent;
+  margin: 10px;
+}
+
+/* DARK MODE: rgb(39, 39, 39) */ 
+
+.dark-mode:hover, .light-mode:hover {
+  border: 2px dashed #F83D4A;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.light {
+  background-color: rgb(235, 235, 235);
+  color: black;
+}
+
+.dark {
+  background-color: rgb(39, 39, 39);
+  color: white;
+}
+
+.light-blue {
+  color: #9792cf;
+}
+
+.light-blue-background {
+  background-color: #656097;
+}
+
+.white {
+  background-color: white;
+}
+
+.pink {
+  background-color: #F83D4A;
+}
+
+.line {
+  width: 32px;
+  height: 3px;
+  background-color: #393757;
+  margin-top: 8px;
+}
+
+.menu-hamburguer {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  position: absolute;
+  right: 30px;
+  border: 1px solid #343153;
+  padding-bottom: 15px;
+  background-color: #cfcce9;
+  border: 2px dashed #F83D4A;
+  display: none;
+}
+
+.hamburguer-menu-icon {
+  position: absolute;
+  height: 40px;
+  right: 30px;
+  display: none;
+}
+
+.hamburguer-menu-icon.active {
+  display: none;
+}
+
+
+.hamburguer-menu-icon:hover {
+  cursor: pointer;
+}
+
+.menu-item-hamburguer, .btn-contato-hamburguer {
+  margin-top: 15px;
+  text-decoration: none;
+  color: rgb(52, 49, 83);
+  padding-left: 10px;
+}
+
+.menu-item-hamburguer:hover, .btn-contato-hamburguer:hover {
+  color:#F83D4A;
+  transition: 0.5s;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburguer-x-icon {
+  display: none;
+  position: absolute;
+  right: 62px;
+  top: 25px;
+}
+
+.hamburguer-x-icon.active {
+  display: flex;
+}
+
+.hamburguer-x-icon:hover {
+  cursor: pointer;
+}
+
+.line1 {
+  rotate: 45deg;
+  position: absolute;
+  top: 2px;
+}
+
+.line2 {
+  position: absolute;
+  rotate: -45deg;
+  top: 2px;
+}
+
+.inactive {
+  display: none;
+}
+
+.card-oculto {
+  background-color:#F83D4A;
+  border: 3px dashed rgb(52, 49, 83);
+  cursor: pointer;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  border:3px solid #343153;
+  width: fit-content;
+  margin: 50px auto;
+  padding: 20px;
+  color: white;
+  background-color: #5d5a83;
+  
+}
+
+.btn-enviar {
+  background-color: #343153;
+  padding: 20px;
+  color: white;
+  border: 2px dashed #F83D4A;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.btn-enviar:hover {
+  background-color: #47455f;
+  cursor: pointer;
+  
+}
+
+input, textarea {
+  background-color: #3d3a58;
+  border: 1px solid #ff9eb3;
+  color: white;
+  margin-left: 5px;
+  margin-right: 20px;
+
+}
+
+.slogan {
+  color: #f3f2ff;
+  margin-bottom: 30px;
+}
+
+.formulario-title {
+  font-family: "Cedarville Cursive", cursive;
+  background-color: #cfcce9;
+  color: #3d3a58;
+  font-size: large;
+  margin-bottom: 30px;
+}
+
+.contato, .socials {
+  margin-bottom: 50px;
+}
+
+.formulario-field {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.formulario-field.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.input-nome {
+  width: 90%;
+  margin-left: 20px;
+}
+
+.input-telefone {
+  width: 200px;
+  height: 30px;
+
+}
+ .input-email {
+  width: 203px;
+  margin-left: 6px;
+ }
+
+.text-mensagem {
+  width: 90%;
+  height: 80px;
+}
+
+.privacidade {
+  color: #343153;
+}
+
+.privacidade:hover {
+  color: royalblue;
+}

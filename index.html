@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site para meu portfólio">
+  <meta name="keywords" content="Agência Digital">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/media.css">
+  <title>Agência</title>
+  <link rel="icon" href="./img/coracao(1).png" type="image/png">
+</head>
+
+<body>
+  <section id="home">
+    <nav class="navbar">
+      <img class="logo-img" src="img/coracao(2).png">
+      <div class="logo">
+        <h1>Agência</h1>
+      </div>
+      <div class="menu">
+        <a class="menu-item" href="#home">Home</a>
+        <!--<a class="menu-item" href="#sobre">Sobre</a>-->
+        <a class="menu-item" href="#servicos">Serviços</a>
+        <a class="btn-contato" href="#contato">Fale Conosco</a>
+      </div>
+      <div class="hamburguer-menu-icon">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="hamburguer-x-icon">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </div>
+    </nav>
+    <div class="menu-hamburguer">
+      <a class="menu-item-hamburguer" href="#home">Home</a>
+      <!--<a class="menu-item" href="#sobre">Sobre</a>-->
+      <a class="menu-item-hamburguer" href="#servicos">Serviços</a>
+      <a class="btn-contato-hamburguer" href="#contato">Fale Conosco</a>
+    </div>
+
+    <div class="home-page">
+      <div class="home-text">
+        <h1>Bem-vindo (a) à </h1>
+        <p class="bemvindo">Nova Era Digital</p>
+        <span> com a
+          <span class="logo-home">Agência.</span>
+          <p class="home-paragrafo">Transformamos ideias em realidades digitais vibrantes. Somos uma agência digital
+            inovadora dedicada a impulsionar a presença online da sua marca e a criar experiências inesquecíveis para o
+            seu público-alvo.</p>
+          <div class="btn-container">
+            <a class="btn-contrate" href="#contato">CONTRATE AGORA</a>
+          </div>
+      </div>
+      <div class="home-img">
+        <img class="home-img" alt="Equipe da Agência" src="img/marketing.png" />
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="sobre-content">
+      <h1 class="sobre-title">Confira abaixo o que podemos fazer para o seu negócio:</h1>
+      <div class="cards">
+        <div class="card" onclick="clickCard(this)">
+          <div class="frente">
+            <img class="icon" src="img/icon1.png">
+            <h2 class="card-title">Desenvolvimento de Sites</h2>
+          </div>
+
+          <div class="tras">
+            <h2 class="card-title-oculto">Transforme sua Presença Online!</h2>
+            <p class="card-text-oculto">Sites responsivos, SEO otimizado e funcionalidades sob medida. Vamos criar
+              juntos
+              seu site dos sonhos!</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="frente">
+            <img class="icon" src="img/icon2.png">
+            <h2 class="card-title">Desenvolvimento de Apps</h2>
+          </div>
+
+          <div class="tras">
+            <h2 class="card-title-oculto">Leve Seu Negócio ao Próximo Nível!</h2>
+            <p class="card-text-oculto">Apps nativos e híbridos com UX intuitiva e funcionalidades avançadas. Transforme
+              sua visão em realidade!</p>
+          </div>
+
+        </div>
+        <div class="card" onclick="clickCard(this)">
+          <div class="frente">
+            <img class="icon" src="img/icon3.png">
+            <h2 class="card-title">Marketing Digital</h2>
+          </div>
+
+          <div class="tras">
+            <h2 class="card-title-oculto">Aumente Sua Visibilidade Online!</h2>
+            <p class="card-text-oculto">Redes sociais, publicidade online e SEO eficaz. Estratégias de marketing digital
+              que impulsionam seu sucesso!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<footer id="contato">
+
+  <div class="footer-content">
+    <h1 class="logo-home logo-footer">Agência</h1>
+    <div class="formulario">
+      <h3 class="formulario-title">Deixe-nos uma mensagem!</h3>
+      <form id="myForm" action="https://formspree.io/f/mzbnqqnd" method="POST">
+        <div class="formulario-field"><span>NOME: </span><input class="input-nome" type="text" required><span></div>
+        <div class="formulario-field"><span>E-MAIL: </span><input id="email" class="input-email" type="email" required><span>
+            TELEFONE: <input id="telefone" class="input-telefone" type="tel" required></span></div>
+        <div class="formulario-field"><span>MENSAGEM: </span><textarea class="text-mensagem" name="mensagem"></textarea>
+        </div>
+        <div class="formulario-field btn"><button type="submit" class="btn-enviar">ENVIAR MENSAGEM</button></div>
+      </form>
+    </div>
+    <div class="text-footer">
+      <div class="contato">
+        <h2 class="footer-title">Contato</h2>
+        <p>Endereço: Rua Exemplo, 123, Cidade, Estado, CEP 12345-678</p>
+        <p>E-mail: <a href="mailto:contato@seudominio.com" class="link-footer">contato@seudominio.com</a></p>
+        <p>Telefone: <a href="tel:+5511999999999" class="link-footer">(11) 99999-9999</a></p>
+      </div>
+ 
+      <div class="socials">
+        <h2 class="footer-title">Siga-nos</h2>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" title="Facebook"><img class="icon-social"
+              src="img/facebook.png"></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><img class="icon-social"
+              src="img/instagram(1).png"></a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn"><img class="icon-social"
+              src="img/linkedin(1).png"></a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; <span id="year">2024</span> Agência. Todos os direitos reservados.
+        <a target="_blank" href="./politica-de-privacidade.html" class="privacidade">Política de Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<a href="https://api.whatsapp.com/send?phone=5585987172112&text=treste" target="_blank"><img src="img/whatsapp.svg"
+    alt="Whatsapp" class="whats"></a>
+<div class="mode">
+  <div class="light-mode">
+    <div> <img class="light-mode-img" src="./img/sol(2).png"></div>
+  </div>
+  <div class="dark-mode">
+    <div><img class="dark-mode-img" src="./img/lua-crescente.png"></div>
+  </div>
+</div>
+<script src="scripts/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+<script>
+  $('#telefone').mask('(00) 0000-0000');
+  /*
+  $(document).ready(function() {
+    $("#email").inputmask({
+      alias: "email",
+      placeholder: "example@mail.com"
+    });
+  }); */
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("myForm");
+    
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // evita envio padrão do formulário
+
+      const formData = new FormData(form); // pegando dados do formulário
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept' : 'application.json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          alert("Mensagem enviada com sucesso!");
+          form.reset(); // limpa formulário após envio
+        } else {
+          response.json().then(data => {
+            if (data.errors) {
+              alert('Erro: ' + data.errors.map(error => error.message).join(', '));
+            }
+          });
+        }
+      }).cath(error => {
+        alert('Ocorreu um erro ao enviar o formulário.')
+      });
+    });
+  });
+
+</script>
+    
+</html>
