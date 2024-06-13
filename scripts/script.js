@@ -74,13 +74,9 @@ xHamburguerIcon.addEventListener("click", () => {
   hamburguerMenuIcon.classList.remove("active");
 });
 
-/*
+
 function clickCard(card) {
-  card.classList.toggle("card-oculto");
-  card.querySelector(".card-title").classList.toggle("inactive");
-  card.querySelector(".icon").classList.toggle("inactive");
-  card.querySelector(".card-title-oculto").classList.toggle("active");
-  card.querySelector(".card-text-oculto").classList.toggle("active");
+  card.querySelector(".card-interior").classList.toggle("flip");
 };
 
 /* for (let i = 0; i < cards.length; i++) {

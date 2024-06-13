@@ -66,42 +66,48 @@
       <h1 class="sobre-title">Confira abaixo o que podemos fazer para o seu negócio:</h1>
       <div class="cards">
         <div class="card" onclick="clickCard(this)">
-          <div class="frente">
-            <img class="icon" src="img/icon1.png">
-            <h2 class="card-title">Desenvolvimento de Sites</h2>
-          </div>
-
-          <div class="tras">
-            <h2 class="card-title-oculto">Transforme sua Presença Online!</h2>
-            <p class="card-text-oculto">Sites responsivos, SEO otimizado e funcionalidades sob medida. Vamos criar
-              juntos
-              seu site dos sonhos!</p>
+          <div class="card-interior">
+            <div class="frente">
+              <img class="icon" src="img/icon1.png">
+              <h2 class="card-title">Desenvolvimento de Sites</h2>
+            </div>
+  
+            <div class="tras">
+              <h2 class="card-title-oculto">Transforme sua Presença Online!</h2>
+              <p class="card-text-oculto">Sites responsivos, SEO otimizado e funcionalidades sob medida. Vamos criar
+                juntos
+                seu site dos sonhos!</p>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <div class="frente">
-            <img class="icon" src="img/icon2.png">
-            <h2 class="card-title">Desenvolvimento de Apps</h2>
-          </div>
-
-          <div class="tras">
-            <h2 class="card-title-oculto">Leve Seu Negócio ao Próximo Nível!</h2>
-            <p class="card-text-oculto">Apps nativos e híbridos com UX intuitiva e funcionalidades avançadas. Transforme
-              sua visão em realidade!</p>
-          </div>
-
-        </div>
         <div class="card" onclick="clickCard(this)">
-          <div class="frente">
-            <img class="icon" src="img/icon3.png">
-            <h2 class="card-title">Marketing Digital</h2>
+          <div class="card-interior">
+            <div class="frente">
+              <img class="icon" src="img/icon2.png">
+              <h2 class="card-title">Desenvolvimento de Apps</h2>
+            </div>
+  
+            <div class="tras">
+              <h2 class="card-title-oculto">Leve Seu Negócio ao Próximo Nível!</h2>
+              <p class="card-text-oculto">Apps nativos e híbridos com UX intuitiva e funcionalidades avançadas. Transforme
+                sua visão em realidade!</p>
+            </div>
           </div>
+        </div>
 
-          <div class="tras">
-            <h2 class="card-title-oculto">Aumente Sua Visibilidade Online!</h2>
-            <p class="card-text-oculto">Redes sociais, publicidade online e SEO eficaz. Estratégias de marketing digital
-              que impulsionam seu sucesso!</p>
+        <div class="card" onclick="clickCard(this)">
+          <div class="card-interior">
+            <div class="frente">
+              <img class="icon" src="img/icon3.png">
+              <h2 class="card-title">Marketing Digital</h2>
+            </div>
+  
+            <div class="tras">
+              <h2 class="card-title-oculto">Aumente Sua Visibilidade Online!</h2>
+              <p class="card-text-oculto">Redes sociais, publicidade online e SEO eficaz. Estratégias de marketing digital
+                que impulsionam seu sucesso!</p>
+            </div>
           </div>
         </div>
       </div>
@@ -114,11 +120,11 @@
     <h1 class="logo-home logo-footer">Agência</h1>
     <div class="formulario">
       <h3 class="formulario-title">Deixe-nos uma mensagem!</h3>
-      <form id="myForm" action="https://formspree.io/f/mzbnqqnd" method="POST">
-        <div class="formulario-field"><span>NOME: </span><input class="input-nome" type="text" required><span></div>
-        <div class="formulario-field"><span>E-MAIL: </span><input id="email" class="input-email" type="email" required><span>
-            TELEFONE: <input id="telefone" class="input-telefone" type="tel" required></span></div>
-        <div class="formulario-field"><span>MENSAGEM: </span><textarea class="text-mensagem" name="mensagem"></textarea>
+      <form id="myForm">
+        <div class="formulario-field"><span>NOME: </span><input id="nome" name="nome" class="input-nome" type="text" required><span></div>
+        <div class="formulario-field"><span>E-MAIL: </span><input id="email" name="email" class="input-email" type="email" required><span>
+            TELEFONE: <input id="telefone" name="telefone" class="input-telefone" type="tel" required></span></div>
+        <div class="formulario-field"><span>MENSAGEM: </span><textarea class="text-mensagem" id="mensagem" name="mensagem"></textarea>
         </div>
         <div class="formulario-field btn"><button type="submit" class="btn-enviar">ENVIAR MENSAGEM</button></div>
       </form>
@@ -160,10 +166,26 @@
     <div><img class="dark-mode-img" src="./img/lua-crescente.png"></div>
   </div>
 </div>
+
+<dialog class="sucesso">
+  <div class="div-dialog">
+    <h2 style="border-bottom: 5px solid green;">Mensagem enviada com sucesso!</h2>
+    <p>Agradecemos o envio. Em breve entraremos em contato com você!</p>
+    <button id="ok">OK</button>
+  </div>
+</dialog>
+
+<dialog class="erro">
+    <h2 style="border-bottom: 5px solid red;">Ocorreu um erro no envio do formulário. </h2>
+    <p>Por favor, tente outra vez. Se o erro persistir, entre em contato conosco.</p>
+    <button id="ok">OK</button>
+</dialog>
+
 <script src="scripts/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 <script>
+  // máscara para tratar inputs
   $('#telefone').mask('(00) 0000-0000');
   /*
   $(document).ready(function() {
@@ -173,23 +195,35 @@
     });
   }); */
 
+  // 
+  const modal = document.querySelector(".sucesso");
+  const modalErro = document.querySelector(".erro");
+  const buttonOk = document.getElementById("ok")
+
   document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("myForm");
     
     form.addEventListener('submit', function(event) {
+      
       event.preventDefault(); // evita envio padrão do formulário
 
       const formData = new FormData(form); // pegando dados do formulário
 
-      fetch(form.action, {
+      fetch('http://localhost:3000/submit', {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify(Object.fromEntries(formData)),
         headers: {
-          'Accept' : 'application.json'
+          'Content-Type' : 'application/json',
+          'Accept' : 'application/json'
         }
       }).then(response => {
         if (response.ok) {
-          alert("Mensagem enviada com sucesso!");
+          // alert("Mensagem enviada com sucesso!");
+          modal.showModal();
+          buttonOk.addEventListener('click', function() {
+              modal.close();
+          });
+
           form.reset(); // limpa formulário após envio
         } else {
           response.json().then(data => {
@@ -198,8 +232,12 @@
             }
           });
         }
-      }).cath(error => {
-        alert('Ocorreu um erro ao enviar o formulário.')
+      }).catch(error => {
+        modalErro.showModal();
+        buttonOk.addEventListener('click', function() {
+          modalErro.close();
+        });
+        form.reset();
       });
     });
   });

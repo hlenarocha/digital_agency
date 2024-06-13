@@ -192,18 +192,51 @@ body {
 }
 
 .card {
+  background-color: transparent;
   width: 30%;
-  padding: 20px;
-  margin: 1%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-interior {
   border: 2px dashed rgb(194, 68, 89);
-  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
   cursor: pointer;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
   transform-style: preserve-3d;
   position: relative;
+  
+}
+
+.card:hover .card-interior {
+  transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.frente, .tras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  backface-visibility: hidden;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.frente {
+  background-color: transparent;
+}
+
+.tras {
+  background-color: #F83D4A;
+  transform: rotateY(180deg);
 }
 
 /*.card:hover {
@@ -217,7 +250,7 @@ body {
   display: none;
 }*/
 
-.card .tras {
+/* .card .tras {
   transform: rotateY(180deg);
 }
 
@@ -235,7 +268,7 @@ body {
 
 .cards:hover .frente {
   backface-visibility: hidden;
-}
+} */
 
 /*
 .card:hover .card-title-oculto, .card:hover .card-text-oculto {
@@ -511,7 +544,7 @@ h1, p, h3, a, div, span {
   padding: 20px;
   color: white;
   background-color: #5d5a83;
-  
+  border-radius: .5em;
 }
 
 .btn-enviar {
@@ -593,3 +626,50 @@ input, textarea {
 .privacidade:hover {
   color: royalblue;
 }
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / .7);
+}
+
+dialog {
+  margin: auto auto;
+  line-height: 40px;
+  font-size: medium;
+  background-color: #343153;
+  color: white;
+  border: 3px dashed #F83D4A;
+  border-radius: .5em;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  display: none;
+  
+}
+
+dialog[open] {
+  display: block;
+}
+
+
+dialog h2 {
+  margin: auto auto;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+dialog button {
+  background-color: #5d5a83;
+  border: none;
+  color: white;
+  font-weight: bolder;
+  padding: 15px;
+  width: 30%;
+  margin: 20px auto;
+  font-size: medium;
+}
+
+dialog button:hover {
+  cursor: pointer;
+  background-color: #4a486b;
+}
+
